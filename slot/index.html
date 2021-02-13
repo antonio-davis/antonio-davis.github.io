@@ -7,13 +7,14 @@
 
     <title>Slot💵🎰</title>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="jquery.spritely.js"></script>
-    <script src="jquery.backgroundPosition.js"></script>
-    <script src="js/slot.js"></script>
+
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+        h1 {
+            color: #424242;
+        }
 
         body {
             font-family: "Inter", sans-serif;
@@ -35,13 +36,12 @@
         }
 
         .slot {
-            background: url("images/reel_normal.png") repeat-y;
-            /*Taken from http://www.swish-designs.co.uk*/
+            background: url("imgs/slot_normal.png") repeat-y;
             width: 100px;
             height: 70px;
             float: left;
-            /*border-radius: 25%;
-            border: 2px solid #242424;*/
+            border-radius: 0%;
+            border: 3px solid #2424;
             background-position: 0 4px;
             background-color: #509556;
         }
@@ -51,8 +51,7 @@
         }
 
         .motion {
-            background: url("images/reel_blur.png") repeat-y;
-            /*Taken from http://www.swish-designs.co.uk*/
+            background: url("imgs/slot_blur.png") repeat-y;
         }
 
         button {
@@ -67,17 +66,14 @@
             font-family: "Inter", sans-serif;
             box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15),
                 0 2px 2px rgba(0, 0, 0, 0.15),
-                0 4px 4px rgba(0, 0, 0, 0.15),
-                0 8px 8px rgba(0, 0, 0, 0.15);
+                0 4px 4px rgba(0, 0, 0, 0.15);
         }
 
         button:hover {
             box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
                 0 2px 2px rgba(0, 0, 0, 0.11),
                 0 4px 4px rgba(0, 0, 0, 0.11),
-                0 8px 8px rgba(0, 0, 0, 0.11),
-                0 16px 16px rgba(0, 0, 0, 0.11),
-                0 18px 18px rgba(0, 0, 0, 0.11);
+                0 8px 8px rgba(0, 0, 0, 0.11);
         }
 
         #result {
@@ -105,10 +101,28 @@
     </style>
 </head>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.3.2.js"></script>
+<script src="js/jquery.spritely.js"></script>
+<script src="js/jquery.backgroundPosition.js"></script>
+<script src="js/slot.js"></script>
+
+<script>
+    jQuery.browser = {};
+    (function () {
+        jQuery.browser.msie = false;
+        jQuery.browser.version = 0;
+        if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
+            jQuery.browser.msie = true;
+            jQuery.browser.version = RegExp.$1;
+        }
+    })();
+</script>
+
 <body>
     <div class="main" style="height: 100vh;">
         <h1>Slot🎰</h1>
-        <p style="text-align: center;"><i>Object list:</i></p>
+        <!--<p style="text-align: center;">score list:</p>-->
         <div class="container">
             <div class="slot-wrapper">
                 <div id="slot1" class="slot"></div>
