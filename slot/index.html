@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Slot💵🎰</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="jquery.spritely.js"></script>
+    <script src="jquery.backgroundPosition.js"></script>
+    <script src="js/slot.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: #a5d6a7;
+        }
+
+        .main {
+            text-align: center;
+        }
+
+        .container {
+            margin: 100px auto;
+            display: inline-block;
+        }
+
+        .slot-wrapper {
+            border: 5px solid #75a478;
+            border-radius: 5%;
+        }
+
+        .slot {
+            background: url("images/reel_normal.png") repeat-y;
+            /*Taken from http://www.swish-designs.co.uk*/
+            width: 100px;
+            height: 70px;
+            float: left;
+            /*border-radius: 25%;
+            border: 2px solid #242424;*/
+            background-position: 0 4px;
+            background-color: #509556;
+        }
+
+        .score-container {
+            display: inline-block;
+        }
+
+        .motion {
+            background: url("images/reel_blur.png") repeat-y;
+            /*Taken from http://www.swish-designs.co.uk*/
+        }
+
+        button {
+            display: inline-block;
+            padding: 16px;
+            font-size: 16px;
+            text-align: center;
+            cursor: pointer;
+            background-color: #ffeb3b;
+            border: none;
+            border-radius: 15%;
+            font-family: "Inter", sans-serif;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15),
+                0 2px 2px rgba(0, 0, 0, 0.15),
+                0 4px 4px rgba(0, 0, 0, 0.15),
+                0 8px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        button:hover {
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11),
+                0 2px 2px rgba(0, 0, 0, 0.11),
+                0 4px 4px rgba(0, 0, 0, 0.11),
+                0 8px 8px rgba(0, 0, 0, 0.11),
+                0 16px 16px rgba(0, 0, 0, 0.11),
+                0 18px 18px rgba(0, 0, 0, 0.11);
+        }
+
+        #result {
+            margin: 20px 0;
+            font-size: 18px;
+            font-weight: bold;
+            height: 22px;
+        }
+
+        .credits {
+            font-size: 15px;
+            margin-top: 20px;
+        }
+
+        .credits .browsers {
+            font-style: italic;
+            font-size: 14px;
+            color: #777;
+            margin-top: 4px;
+        }
+
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main" style="height: 100vh;">
+        <h1>Slot🎰</h1>
+        <p style="text-align: center;"><i>Object list:</i></p>
+        <div class="container">
+            <div class="slot-wrapper">
+                <div id="slot1" class="slot"></div>
+                <div id="slot2" class="slot"></div>
+                <div id="slot3" class="slot"></div>
+                <div class="clear"></div>
+            </div>
+            <div id="result"></div>
+            <button id="control">💵</button>
+            <p style="text-align: center; padding-top: 32px; color: #fff;">⚠️ Play responsibly</p>
+        </div>
+    </div>
+    <footer class="credits">
+        <div style="text-align: center; padding-bottom: 20px;">code taken from <a
+                style="text-decoration: none; color: #75a478; text-decoration: underline;"
+                href="https://odhyan.com/blog/">this
+                guy</a> 🤝</div>
+    </footer>
+</body>
+
+</html>
