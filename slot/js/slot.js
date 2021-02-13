@@ -155,6 +155,7 @@ $(document).ready(function () {
 	};
 
 	/**
+	 * 
 	 * @method reset
 	 * Reset a slot to initial state
 	 */
